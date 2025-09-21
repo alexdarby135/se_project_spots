@@ -2,7 +2,7 @@
   src: url("./fonts/Poppins-Medium.ttf") format("truetype");
   font-family: "Poppins";
   font-weight: 500;
-  font-style: medium;
+  font-style: normal;
 }
 
 @font-face{
