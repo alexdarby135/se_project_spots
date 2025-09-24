@@ -27,6 +27,7 @@
 
 .card__button {
   background-image: url(../images/like-icon.svg);
+  padding: 0;
   width: 23px;
   height: 20px;
   border: none;
@@ -38,6 +39,7 @@
 .card__button:hover {
   opacity: 1;
   transition: opacity 0.1s ease-in-out;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 627px) {
@@ -46,8 +48,20 @@
     margin: auto;
   }
 
+  .card__title {
+    font-size: 16px;
+    line-height: 100%;
+  }
+
   .card__image {
     height: 288px;
     width: 288px;
+  }
+
+  .card__button {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 20px;
+    height: 18px;
   }
 }

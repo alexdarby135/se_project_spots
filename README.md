@@ -10,9 +10,11 @@
 
 **Intro**
 
-I'm excited to introduce Spots, a new photo sharing site designed to be clean and simple. So far, I've built a majority of the front-end of this site to demonstrate the look and give a peak at the planned functionality of Spots. Enjoy!
+I'm excited to introduce Spots, a new photo sharing site designed to be clean and simple. So far, I've built a majority of the front-end of this site to demonstrate the look and give a peak at the planned functionality of Spots. As you're browsing the design, take a look at the short video below to get a glimpse at its creation. Enjoy!
 
-View project here.
+[View project here.](https://alexdarby135.github.io/se_project_spots/)
+
+[View video here.](https://drive.google.com/file/d/1b13Ja1q5DB1eQ8SUwIPPIquSZkavuNDA/view?usp=drive_link)
 
 **Technologies Used**
 
