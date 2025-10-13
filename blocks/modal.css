@@ -10,10 +10,14 @@
   justify-content: center;
   align-items: center;
   padding: 0 10px;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out, visibility 0s ease-in-out 0.5s;
 }
 
 .modal-is-opened {
   visibility: visible;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .modal__container {
@@ -39,6 +43,14 @@
   color: #212121;
   opacity: 40%;
   background-position: center;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.modal__close-button:hover {
+  opacity: 1;
+  color: black;
+  transition: opacity 0.1s ease-in-out;
+  cursor: pointer;
 }
 
 .modal__title {
