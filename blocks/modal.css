@@ -94,6 +94,8 @@
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .modal__input::placeholder {
@@ -110,6 +112,13 @@
   width: 156px;
   height: 52px;
   border-radius: 8px;
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
+}
+
+.modal__submit-button:hover {
+  cursor: pointer;
+  opacity: 0.8;
 }
 
 @media screen and (max-width: 627px) {
