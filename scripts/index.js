@@ -93,6 +93,8 @@ function handleNewPostSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
 
+  newPostForm.reset();
+
   closeModal(newPostModal);
 }
 
@@ -105,7 +107,7 @@ function getCardElement(data) {
   cardImageEl.src = data.link;
   cardImageEl.alt = data.name;
 
-  const cardLikeButton = cardElement.querySelector("#card-like-button");
+  const cardLikeButton = cardElement.querySelector(".card__like-button");
   cardLikeButton.addEventListener("click", () => {
     cardLikeButton.classList.toggle("card__like-button-liked");
     cardLikeButton.classList.toggle("card__like-button");
@@ -120,7 +122,7 @@ function getCardElement(data) {
     previewImage.src = data.link;
     previewImage.alt = data.name;
     previewCaption.textContent = data.name;
-    previewModal.classList.add("modal-is-opened");
+    openModal(previewModal);
   });
 
   return cardElement;

@@ -59,7 +59,6 @@
 
 .profile__edit-button:hover {
   opacity: 1;
-  transition: opacity 0.1s ease-in-out;
   cursor: pointer;
 }
 
@@ -86,7 +85,6 @@
 
 .profile__add-button:hover {
   opacity: 0.8;
-  transition: opacity 0.1s ease-in-out;
   cursor: pointer;
 }
 

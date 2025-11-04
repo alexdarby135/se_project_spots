@@ -50,19 +50,11 @@
           <ul class="cards__list">
             <template id="card-template">
               <li class="card">
-                <button
-                  id="card-delete-button"
-                  class="card__delete-button"
-                  type="button"
-                ></button>
+                <button class="card__delete-button" type="button"></button>
                 <img src="#" alt="" class="card__image" />
                 <div class="card__content">
                   <h2 class="card__title"></h2>
-                  <button
-                    id="card-like-button"
-                    class="card__like-button"
-                    type="button"
-                  ></button>
+                  <button class="card__like-button" type="button"></button>
                 </div>
               </li>
             </template>
@@ -111,6 +103,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Paste a link to the picture"
+                required
               />
             </label>
             <label for="card-caption-input" class="modal__label"
@@ -120,6 +113,7 @@
                 type="text"
                 class="modal__input"
                 placeholder="Type your caption"
+                required
               />
             </label>
             <button type="submit" class="modal__submit-button">Save</button>
@@ -128,12 +122,11 @@
       </div>
       <div class="modal modal_type_preview" id="preview-modal">
         <div class="modal__image-container">
-          <button type="button" class="modal__close-button modal__close-button_type_preview"></button
-          ><img
-            src="#"
-            alt=""
-            class="modal__image"
-          />
+          <button
+            type="button"
+            class="modal__close-button modal__close-button_type_preview"
+          ></button
+          ><img src="#" alt="" class="modal__image" />
           <p class="modal__caption"></p>
         </div>
       </div>
