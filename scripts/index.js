@@ -71,20 +71,47 @@ const cardsList = document.querySelector(".cards__list");
 // Function Declarations
 function openModal(modal) {
   modal.classList.add("modal-is-opened");
-  window.addEventListener("keydown", function (evt) {
-    if (evt.key === "Escape") {
-      closeModal(modal);
-    }
-  });
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal-is-opened");
-  window.removeEventListener("keydown", function (evt) {
-    if (evt.key === "Escape") {
-      closeModal(modal);
-    }
-  });
+}
+
+function handleEscapeKeyProfile(evt) {
+  if (evt.key === "Escape") {
+    closeModal(editProfileModal);
+    removeEscapeListener();
+  }
+}
+
+function handleEscapeKeyPost(evt) {
+  if (evt.key === "Escape") {
+    closeModal(newPostModal);
+    removeEscapeListener();
+  }
+}
+
+function handleEscapeKeyPreview(evt) {
+  if (evt.key === "Escape") {
+    closeModal(previewModal);
+    removeEscapeListener();
+  }
+}
+
+function addEscapeListenerProfile() {
+  window.addEventListener("keydown", handleEscapeKeyProfile);
+}
+
+function addEscapeListenerPost() {
+  window.addEventListener("keydown", handleEscapeKeyPost);
+}
+
+function addEscapeListenerPreview() {
+  window.addEventListener("keydown", handleEscapeKeyPreview);
+}
+
+function removeEscapeListener() {
+  window.addEventListener("keydown", handleEscapeKey);
 }
 
 function handleEditProfileSubmit(evt) {
@@ -128,7 +155,7 @@ function getCardElement(data) {
   const cardLikeButton = cardElement.querySelector(".card__like-button");
   cardLikeButton.addEventListener("click", () => {
     cardLikeButton.classList.toggle("card__like-button-liked");
-    cardLikeButton.classList.toggle("card__like-button");
+    cardLikeButton.classList.toggle("card__like-button-liked");
   });
 
   const cardDeleteButton = cardElement.querySelector(".card__delete-button");
@@ -156,6 +183,9 @@ editProfileButton.addEventListener("click", function () {
     settings
   );
   openModal(editProfileModal);
+
+  addEscapeListenerProfile();
+
   window.onclick = function (evt) {
     if (evt.target == editProfileModal) {
       closeModal(editProfileModal);
@@ -172,6 +202,9 @@ editProfileForm.addEventListener("submit", handleEditProfileSubmit);
 // New Post
 newPostButton.addEventListener("click", function () {
   openModal(newPostModal);
+
+  addEscapeListenerPost();
+
   window.onclick = function (evt) {
     if (evt.target == newPostModal) {
       closeModal(newPostModal);
@@ -189,6 +222,8 @@ newPostForm.addEventListener("submit", handleNewPostSubmit);
 previewCloseButton.addEventListener("click", () => {
   closeModal(previewModal);
 });
+
+addEscapeListenerPreview();
 
 window.onclick = function (evt) {
   if (evt.target == previewModal) {
