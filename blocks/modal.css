@@ -93,7 +93,7 @@
   border-style: solid;
   border-radius: 8px;
   border-width: 1px;
-  border-color: #212121;
+  border-color: rgba(33, 33, 33, 0.4);
   text-overflow: ellipsis;
   overflow: hidden;
   white-space: nowrap;
@@ -101,9 +101,26 @@
   box-sizing: border-box;
 }
 
+.modal__input:hover {
+  cursor: pointer;
+  border-color: rgba(33, 33, 33, 1);
+}
+
 .modal__input::placeholder {
   color: #212121;
   opacity: 0.3;
+}
+
+.modal__input_state_error {
+  border-color: rgba(255, 0, 0, 0.6);
+}
+
+.modal__error {
+  display: block;
+  color: rgba(255, 0, 0, 0.7);
+  font-family: "Poppins", "Arial", "Helvetica", sans-serif;
+  font-size: 16px;
+  line-height: 110%;
 }
 
 .modal__submit-button {
@@ -122,6 +139,10 @@
 .modal__submit-button:hover {
   cursor: pointer;
   opacity: 0.8;
+}
+
+.modal__submit-button_disabled {
+  opacity: 0.5;
 }
 
 .modal__image-container {
