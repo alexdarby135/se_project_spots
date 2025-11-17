@@ -2,24 +2,30 @@
 
 ### Overview
 
+- Project Pitch Video
 - Intro
 - Technologies Used
 - Figma
 - Examples
 - Future Development
 
+**Project Pitch Video**
+
+Check out my video describing this project and hear more about goals, features, challenges, and more!
+
+[View video here.](https://drive.google.com/file/d/1MbRH4x7h1tQmZ4yZehdPRr9nY9r2ZLMG/view?usp=sharing)
+
 **Intro**
 
-I'm excited to introduce Spots, a new photo sharing site designed to be clean and simple. So far, I've built a majority of the front-end of this site to demonstrate the look and give a peak at the planned functionality of Spots. As you're browsing the design, take a look at the short video below to get a glimpse at its creation. Enjoy!
+I'm excited to introduce Spots, a new photo sharing site designed to be clean and simple. So far, I've built a majority of the front-end including site structure, styling, and user experience oriented functionality. Enjoy!
 
 [View project here.](https://alexdarby135.github.io/se_project_spots/)
-
-[View video here.](https://drive.google.com/file/d/1b13Ja1q5DB1eQ8SUwIPPIquSZkavuNDA/view?usp=drive_link)
 
 **Technologies Used**
 
 - HTML
 - CSS
+- JavaScript
 - Responsive Design
 - Figma
 
