@@ -110,8 +110,16 @@ function addEscapeListenerPreview() {
   window.addEventListener("keydown", handleEscapeKeyPreview);
 }
 
-function removeEscapeListener() {
-  window.addEventListener("keydown", handleEscapeKey);
+function removeEscapeListenerProfile() {
+  window.removeEventListener("keydown", handleEscapeKeyProfile);
+}
+
+function removeEscapeListenerPost() {
+  window.removeEventListener("keydown", handleEscapeKeyPost);
+}
+
+function removeEscapeListenerPreview() {
+  window.removeEventListener("keydown", handleEscapeKeyPreview);
 }
 
 function handleEditProfileSubmit(evt) {
@@ -155,7 +163,6 @@ function getCardElement(data) {
   const cardLikeButton = cardElement.querySelector(".card__like-button");
   cardLikeButton.addEventListener("click", () => {
     cardLikeButton.classList.toggle("card__like-button-liked");
-    cardLikeButton.classList.toggle("card__like-button-liked");
   });
 
   const cardDeleteButton = cardElement.querySelector(".card__delete-button");
@@ -186,7 +193,7 @@ editProfileButton.addEventListener("click", function () {
 
   addEscapeListenerProfile();
 
-  window.onclick = function (evt) {
+  editProfileModal.onclick = function (evt) {
     if (evt.target == editProfileModal) {
       closeModal(editProfileModal);
     }
@@ -205,7 +212,7 @@ newPostButton.addEventListener("click", function () {
 
   addEscapeListenerPost();
 
-  window.onclick = function (evt) {
+  newPostModal.onclick = function (evt) {
     if (evt.target == newPostModal) {
       closeModal(newPostModal);
     }
@@ -225,7 +232,7 @@ previewCloseButton.addEventListener("click", () => {
 
 addEscapeListenerPreview();
 
-window.onclick = function (evt) {
+previewModal.onclick = function (evt) {
   if (evt.target == previewModal) {
     closeModal(previewModal);
   }
